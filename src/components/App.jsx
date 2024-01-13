@@ -1,14 +1,23 @@
-import React from "react";
+import React from 'react';
+
+import Login from './Login';
+
+var isLoggedIn = false;
+
+const currentTime = new Date().getHours();
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <form className="form">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
+      {
+        // Ternary
+        // isLoggedIn === true ? <h1>Hello</h1> : <Login />
+
+        // AND Operator
+        // currentTime > 12 ? <h1>Why Are You Still Working?</h1> : null
+        // Bisa Juga Kek Gini
+        currentTime > 12 && <h1>Why Are You Still Working?</h1>
+      }
     </div>
   );
 }
